@@ -32,5 +32,13 @@ class Sistema:
                 else:
                     print("É necessário digitar 's' para confirmar ou 'n' para cancelar.")
 
+    def listar_usuario(self):
+        if self.clientes:
+            for Pessoa in self.clientes:
+                print(Pessoa)
+        else:
+            print(f'Sua agenda está vazia.')
+
+
 
 
