@@ -20,3 +20,17 @@ class Sistema:
            self.clientes[nome].email = novo_email
            print(f'{nome} foi editado com sucesso!')
 
+    def remover_usuario(self,nome):
+        if nome in self.clientes:
+            while True:
+                confirmar_deletar = input(f'O usuário {nome} será PERMANENTEMENTE deletado. Deseja continuar? [s/n] ')
+                if confirmar_deletar == 's':
+                    del self.clientes[nome]
+                elif confirmar_deletar == 'n':
+                    print(f"O usuário {nome} não foi deletado.")
+                    break
+                else:
+                    print("É necessário digitar 's' para confirmar ou 'n' para cancelar.")
+
+
+
